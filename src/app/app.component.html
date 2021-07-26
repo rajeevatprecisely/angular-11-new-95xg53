@@ -1,0 +1,11 @@
+<hello [items]="[{label: 'test', value: 'test'}]"></hello>
+<p>
+  Start editing to see some magic happen :)
+</p>
+Dropdown with form
+<form [formGroup]="testForm">
+<hello [items]="nameList" formControlName="name"
+        [selectedItem]="selectedName"
+        (selected)="onNameChange($event)"></hello>
+<p>Selected Name is : {{ selectedName }}</p>
+</form>

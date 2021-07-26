@@ -1,0 +1,17 @@
+<p-dropdown [options]="items" [(ngModel)]="selectedItem"
+            [filter]="filterable" styleClass="p-dropdown"
+            [virtualScroll]="virtualScroll" (onChange)="dropdownChange($event)"
+            [disabled]="disabled" 
+            [placeholder]="defaultText"
+            optionLabel="label"
+            optionValue="value"
+            dropdownIcon="fa fa-caret-down" [appendTo]="appendTo">
+    <ng-template let-item pTemplate="selectedItem">
+        <span>{{item.label}}</span>
+    </ng-template>
+    <ng-template let-itemObject pTemplate="item">
+        <div class="ui-helper-clearfix">
+            <div>{{itemObject.label}}</div>
+        </div>
+    </ng-template>
+</p-dropdown>
